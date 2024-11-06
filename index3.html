@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+  body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  #page1{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(19, 19, 20);
+
+  }
+  #page2{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(99, 99, 234);
+    padding: 5vw 0px;
+  }
+  #page2 h1{
+ 
+    font-size: 40vw;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -50px;
+    font-weight: 300;
+  }
+  #page3{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(39, 39, 171);
+  }
+
+    </style>
+</head>
+<body>
+         
+
+           <div id="page1"></div>
+           <div id="page2"><h1>Shivam</h1></div>
+           <div id="page3"></div>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     
+     
+     <script>
+    gsap.to("#page2 h1",{
+        transform:"translateX(-90%)",
+        scrollTrigger:{
+            trigger:"#page2",
+            scroller:"body",
+            markers:true,
+            start:"top 0%",
+            end:"top -150%",
+            scrub:2,
+            pin:true
+
+        }
+    })
+
+     </script>
+</body>
+</html>
