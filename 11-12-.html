@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        background-color: darkgray;
+      }
+      /* .main-ctn {
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(28, 32, 154);
+      } */
+      .container {
+        height: 100vh;
+        width: 100vw;
+      }
+      .ctn1 {
+        background-color: darkcyan;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ctn2 {
+        background-color: pink;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ctn3 {
+        background-color: palevioletred;
+        text-align: center;
+      }
+      .ctn3 .div{
+        height: 200px;
+        width: 200px;
+        background-color: darkorchid;
+        box-shadow: 5px 5px 10px #00000070;
+      }
+      .ctn3 h1{
+        font-size: 1px;
+        font-family: sans-serif;
+        color: #fff;
+        text-transform: uppercase;
+      }
+      .ctn3 .div1{
+        height: 300px;
+        width: 300px;
+        background-color: darkorange;
+        box-shadow: 5px 5px 10px #00000070;
+       
+      }
+      .ctn4 {
+        background-color: darkorchid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ctn4 .box4{
+        height: 400px;
+        width: 400px;
+        background-color: #00296b;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px #1111118c;
+      }
+      .ctn5 {
+        background-color: #ef233c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ctn5 .box5{
+        height: 400px;
+        width: 400px;
+        background-color: #8ac926;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px #1111118c;
+      }
+      .ctn6 {
+        background-color: #57cc99;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ctn6 .box6{
+        height: 400px;
+        width: 400px;
+        background-color: #ffca3a;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px #1111118c;
+      }
+      .ctn7 {
+        background-color: #0be4f8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ctn7 .box7{
+        height: 400px;
+        width: 400px;
+        background-color: #ff595e;
+        border-radius: 20px;
+        box-shadow: 2px 2px 5px #1111118c;
+      }
+      .ctn8 {
+        background-color: #0fa3b1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .ctn9 {
+        background-color: #054c53;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        position: relative;
+      
+        overflow-x: hidden;
+        padding: 50px;
+      }
+      .ctn9 h1{
+        text-align: center;
+        font-size: 30vw;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        margin-left: 100px;
+        white-space: nowrap;
+
+      }
+     
+      .ctn8 h1{
+       font-size: 8rem;
+       font-weight: 700;
+       font-family: sans-serif;
+       text-transform: uppercase;
+       color: #fff;
+       white-space: nowrap;
+       opacity: 0;
+
+      }
+      .ctn10 {
+        height: 100vh;
+        width: 100vw;
+        
+        background-color: #e81092;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .ctn11 {
+        height: 100vh;
+        width: 100vw;
+        
+        background-color: #22e810;
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .ctn12 {
+        height: 100vh;
+        width: 100vw;
+        
+        background-color: #45a13c;
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .ctn13 {
+        height: 100vh;
+        width: 100vw;
+        
+        background-color: #a0e810;
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .text1-box {
+        height: 80vh;
+        width: 80vw;
+        border: 2px solid black;
+      }
+      .text2-box {
+        height: 80vh;
+        width: 80vw;
+        border: 2px solid black;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 30px;
+        padding: 50px;
+      }
+      .text2-box div{
+     border: 2px solid black;
+     opacity: 1;
+      }
+      .text2-box div p{
+        font-size: 3.2em;
+        font-family: sans-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: darkslateblue;
+        opacity: 1;
+      }
+
+      .text1-box p {
+        font-size: 3.2em;
+        font-family: sans-serif;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: darkslateblue;
+        opacity: 1;
+       
+    }
+    </style>
+  </head>
+  <body>
+    <div class="main-ctn">
+      <div class="ctn1 container" >
+        <div class="text1-box">
+          <p>sit amet consectetur adipisicing.</p>
+          <p>sit amet consectetur adipisicing.</p>
+          <p>sit amet consectetur adipisicing.</p>
+          <p>sit amet consectetur adipisicing.</p>
+          <p>sit amet consectetur adipisicing.</p>
+          <p>sit amet consectetur adipisicing.</p>
+          <p>sit amet consectetur adipisicing.</p>
+          <p>sit amet consectetur adipisicing.</p>
+          <p>sit amet consectetur adipisicing.</p>
+          <p>sit amet consectetur adipisicing.</p>
+        
+        </div>
+      </div>
+      <div class="ctn2 container"  >
+        <div class="text2-box">
+           <div>
+            <p>sit amet consectetur adipisicing.</p>
+           </div>
+           <div>
+            <p>sit amet consectetur adipisicing.</p>
+           </div>
+           <div>
+            <p>sit amet consectetur adipisicing.</p>
+           </div>
+           <div>
+            <p>sit amet consectetur adipisicing.</p>
+           </div>
+           <div>
+            <p>sit amet consectetur adipisicing.</p>
+           </div>
+           <div>
+            <p>sit amet consectetur adipisicing.</p>
+           </div>
+           
+           
+          </div>
+      </div>
+      <div class="ctn3 container"  >
+       <div class="div"></div>
+       <h1>shivam</h1>
+       <div class="div1"></div>
+      </div>
+      
+      <div class="ctn4 container"  >
+        <div class="box4"></div>
+      </div>
+      <div class="ctn5 container"  >
+        <div class="box5"></div>
+      </div>
+      <div class="ctn6 container"  >
+        <div class="box6"></div>
+      </div>
+      <div class="ctn7 container"  >
+        <div class="box7"></div>
+      </div>
+      <div class="ctn8 container"  >
+        <h1>SEE</h1>
+       </div>
+     
+      <div class="ctn9 container" >
+        <div style="border: 2px solid red ; display: flex; flex-direction: column;">
+          <div style="border: 2px solid black ; overflow: hidden; box-shadow: inset 10px 10px 10px #111;">
+            <h1>society of electronics engineering</h1>
+          </div>
+          <!-- <div style="border: 2px solid #8ac926 ; display: flex; flex-direction: row; justify-content: space-around;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 20 20">
+              <path fill="currentColor" fill-rule="evenodd" d="M2 10a.75.75 0 0 1 .75-.75h12.59l-2.1-1.95a.75.75 0 1 1 1.02-1.1l3.5 3.25a.75.75 0 0 1 0 1.1l-3.5 3.25a.75.75 0 1 1-1.02-1.1l2.1-1.95H2.75A.75.75 0 0 1 2 10Z" clip-rule="evenodd"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+            <path fill="currentColor" fill-rule="evenodd" d="M7.28 7.72a.75.75 0 0 1 0 1.06l-2.47 2.47H21a.75.75 0 0 1 0 1.5H4.81l2.47 2.47a.75.75 0 1 1-1.06 1.06l-3.75-3.75a.75.75 0 0 1 0-1.06l3.75-3.75a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd"/>
+        </svg>
+            
+            
+            </div> -->
+
+          </div>
+        </div>
+       
+       
+     
+       </div>
+       <div class="ctn10 container"  >
+        <img src="https://hdqwalls.com/wallpapers/earth-space-hd.jpg"  height="100%" width="100%">
+    
+    </div>
+       <div class="ctn11 container"  >
+        <!-- <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, voluptates doloremque. Explicabo laborum natus totam beatae pariatur vel expedita rerum.</h1>
+        -->
+       </div>
+       <div class="ctn12 container"  >
+        <img src="https://hdqwalls.com/wallpapers/earth-space-hd.jpg"  height="100%" width="100%">
+    
+       </div>
+       <div class="ctn13 container" >
+    
+       </div>
+
+    </div>
+
+
+   
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+
+  
+    <script>
+
+      
+
+
+
+   var tl = gsap.timeline();
+   var tl2 =  gsap.timeline();
+
+
+        tl.from('.text1-box p',{
+            y:100,
+            duration:2,
+            delay:1,
+           
+            scale:3,
+            opacity:0,
+            stagger:0.3,
+           
+             
+        })
+        tl.from('.text2-box div',{
+
+             y:100,
+            duration:2,
+           
+            repeat:1,
+            opacity:0,
+            
+            stagger:1
+        })
+        tl2.to('.ctn3 .div',{
+          x:1500,
+          duration:3,
+            delay:1,
+            scale:1.5,
+            rotate:720,
+            borderRadius:"50%",
+            // repeat:-1,
+            background: "darkturquoise",
+            // yoyo:true
+
+           
+          
+        })
+        tl2.from('.ctn3 .div1',{
+          x:1500,
+          duration:3,
+            delay:1,
+            scale:1.5,
+            rotate:720,
+            borderRadius:"50%",
+            // repeat:-1,
+            background: "darkturquoise",
+            // yoyo:true
+
+           
+          
+        })
+
+        tl2.to('.ctn3 h1',{
+          scale:50,
+          duration:5,
+            delay:1,
+          })
+          gsap.from('.ctn4 .box4',{
+            scale:0,
+            delay:0,
+            duration:2,
+            rotate:720
+          })
+          gsap.from('.ctn5 .box5',{
+            scale:0,
+            delay:0,
+            duration:2,
+            rotate:720,
+           
+            scrollTrigger:{
+              trigger:".ctn5 .box5",
+              scroller:"body",
+              markers:true,
+              start:"top 80%",
+              end:"top 20%",
+              scrub:2
+
+            }
+          })
+       
+          gsap.to('.ctn8 h1',{
+             opacity:1,
+            scale:5,
+            delay:0,
+            duration:5,
+           
+            scrollTrigger:{
+              trigger:".ctn8 h1",
+              scroller:"body",
+              markers:true,
+              start:"top 85%",
+              end:"top 35%",
+              scrub:3
+
+            }
+          })
+          gsap.from('.ctn6 .box6',{
+            scale:0,
+            delay:1,
+            duration:2,
+            rotate:720,
+            scrollTrigger:".ctn6 .box6"
+
+          })
+         
+         
+          gsap.from('.ctn7 .box7',{
+            scale:0,
+            delay:1,
+            duration:2,
+            rotate:720
+          })
+
+   gsap.to(".ctn9 h1",{
+   
+    transform:"translateX(-600%)",
+
+    scrollTrigger:{
+            trigger:".ctn9",
+            scroller:"body",
+            markers:true,
+            start:"top 0%",
+            end:"top -180%",
+            scrub:3,
+            pin:true
+
+        }
+   })
+
+  //  var main = document.querySelector(".main-ctn")
+   
+  //  var scroll = new LocomotiveScroll({
+          
+  //         el:main,
+  //          smooth:true,
+  //         lerp:0.1,
+  //      })
+
+                    
+
+    </script>
+  </body>
+</html>
